@@ -16,7 +16,7 @@ Last session: (none), on (which PC)
 - [x] Node.js + npm
 - [x] GitHub Desktop installed
 - [x] Signed in to GitHub Desktop
-- [ ] `coding-journey` repo published to GitHub
+- [x] `coding-journey` repo published to GitHub (github.com/adamyama/coding-journey)
 - [x] Postman installed
 - [ ] Supabase account (needed by M7)
 - [ ] Vercel account (needed by M5)
@@ -25,7 +25,7 @@ Last session: (none), on (which PC)
 ### Other PCs
 | PC | Tools installed | coding-journey cloned |
 |---|---|---|
-| This laptop | yes | (after first push) |
+| This laptop | yes | yes (original) |
 | Other laptop | no | no |
 | PC | no | no |
 

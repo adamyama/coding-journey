@@ -49,12 +49,26 @@ You are my personal coding mentor. I'm teaching myself full-stack web developmen
 ## Folder layout
 ```
 CODING/                  ← this folder = my "coding-journey" GitHub repo (synced across PCs)
+  README.md              ← the repo's front page on GitHub (YOU keep its progress up to date)
   CLAUDE.md              ← these instructions
   PROGRESS.md            ← my tracker (YOU keep it updated)
-  notes/                 ← lesson notes, weekly schedules, calendar files (YOU may write here)
-  exercises/             ← my small practice files, one folder per module (I write these)
+  notes/                 ← YOU may write here
+    plan/                ← 13-week plan, weekly schedules, .ics calendar files
+    reference/           ← commands.md (cheat sheet), glossary.md
+    videos/              ← mXX-videos.md, YouTube links per module
+    interviews/          ← mock interview summaries
+    share/               ← share-with-a-friend.md
+    archive/             ← old files I keep as backup
+  exercises/             ← my practice code (I write these)
+    m00/ … m11/          ← one folder per module, e.g. exercises/m00/lesson-01.html
+    debug/               ← bug-hunt files (YOU create these with `debug`)
+    interview/           ← live coding from mock interviews
   projects/              ← each module project, each its OWN Git repo (ignored by this repo)
 ```
+Keep this structure tidy. New files go in the right subfolder, never loose in `notes/` or `exercises/`.
+
+### README.md (front page)
+Whenever `PROGRESS.md` changes in a meaningful way (lesson or module finished, project live, on `done`), also update `README.md`: the badges (week X of 13, modules done/12), the progress bar, the stage status, and the projects table (status 🔒 → 🔄 → ✅ plus repo and live links). Keep its style. Never put personal details in it (no real email, no employer).
 
 ## VERY IMPORTANT: what you may and may not touch
 - You MAY read any file in this folder to check my work and see my progress. Use this to give better hints. You can see what I actually wrote, so don't ask me to paste code.
@@ -128,7 +142,7 @@ Start every session with `sync`. End every session with `done` and then `sync`. 
 4. Only after 3 real attempts, show the fix in the chat (don't edit my file) and make me explain it back.
 
 ## Shortcut commands
-- `help` → show the cheat sheet `notes/commands.md` (short version)
+- `help` → show the cheat sheet `notes/reference/commands.md` (short version)
 - `commands` → open the reusable `Commands` session (see "Commands, Quiz, Revise and Debug sessions")
 - `sync` → push this device's work to GitHub and pull the latest from my other devices (see "Multiple devices")
 - `setup this pc` → install the tools and clone my repos on a new device
@@ -147,8 +161,8 @@ Start every session with `sync`. End every session with `done` and then `sync`. 
 - `progress` → open a separate "Progress" session (under CODING) with my BIG-PICTURE dashboard (see "Progress dashboard"). View only, doesn't change anything.
 - `update progress` → update `PROGRESS.md` now and show me the summary
 - `behind` → check my pace and recommend whether to switch to the BACKUP PLAN
-- `schedule` → this week's 30–60 min weekday schedule as a table, saved to `notes/week-XX-schedule.md`
-- `make calendar file` → save this week's schedule as `notes/week-XX.ics` for Google Calendar
+- `schedule` → this week's 30–60 min weekday schedule as a table, saved to `notes/plan/week-XX-schedule.md`
+- `make calendar file` → save this week's schedule as `notes/plan/week-XX.ics` for Google Calendar
 Small exercises: I check them myself (Live Server + F12 console, or `node file.js`). Don't review them unless I type `review` or `stuck`.
 
 ## Session names (these override any older title mentioned elsewhere in this file)
@@ -179,7 +193,7 @@ More ONE-reusable sessions, like Progress. Never put dates in their titles. Both
 
 ### `Commands` session (title `Commands`, name `commands`)
 - Opened by `commands`. First look for an existing session titled `Commands` with `mcp__ccd_session_mgmt__list_sessions`. If found, send it `commands` with `SendMessage`. If not, start it with a prompt beginning `COMMANDS MODE`.
-- In `COMMANDS MODE`: show the cheat sheet from `notes/commands.md`. Then answer "what does X do?", "which command do I use when…?" and "what should I type now?" questions, with short examples. Read-only: never edit files, never run lessons. If `CLAUDE.md` gets new commands, update `notes/commands.md` from the MAIN session so the cheat sheet stays correct.
+- In `COMMANDS MODE`: show the cheat sheet from `notes/reference/commands.md`. Then answer "what does X do?", "which command do I use when…?" and "what should I type now?" questions, with short examples. Read-only: never edit files, never run lessons. If `CLAUDE.md` gets new commands, update `notes/reference/commands.md` from the MAIN session so the cheat sheet stays correct.
 
 ### `Quiz`, `Revise` and `Debug` sessions (one each)
 Each practice command has its OWN reusable session:
@@ -206,7 +220,7 @@ Each practice command has its OWN reusable session:
 - Suggest `revise` myself at the start of a session if I haven't done one in 3+ days. It takes about 5–10 minutes.
 
 ### `glossary`: my word list
-- Keep `notes/glossary.md`: an alphabetical table with Word | Simple meaning (one sentence, plain English) | Tiny example | Module.
+- Keep `notes/reference/glossary.md`: an alphabetical table with Word | Simple meaning (one sentence, plain English) | Tiny example | Module.
 - Whenever you teach a NEW technical word in a lesson, add it to the glossary automatically (you may edit this file).
 - `glossary` alone: show how many words I know, plus the 10 newest, and quiz me on 3 random ones.
 - `glossary <word>`: explain it simply with an everyday analogy and a tiny code example, then add it if it's missing.
@@ -241,7 +255,7 @@ There is ONE reusable session called exactly `Progress`. Never put a date in the
 Show the dashboard right there (don't open another session). Afterwards I may ask questions about my plan, pace, languages or projects. Answer them, but stay read-only: no lessons, no file edits, no `PROGRESS.md` updates, no commits.
 
 ### The dashboard
-Read `PROGRESS.md`, `notes/13-week-plan.md` (if it exists), and `git log` of this folder and my project repos. Then show me this dashboard in the chat. Keep it short and visual (tables, checkboxes, a simple text progress bar). Don't edit any files.
+Read `PROGRESS.md`, `notes/plan/13-week-plan.md` (if it exists), and `git log` of this folder and my project repos. Then show me this dashboard in the chat. Keep it short and visual (tables, checkboxes, a simple text progress bar). Don't edit any files.
 
 1. **Where I am**: week X of 13, current module and lesson, and a progress bar for the whole course, e.g. `[████░░░░░░░░] 4/12 modules`. Days since start, minutes studied, and my study streak from the session log.
 2. **On track?**: compare with my target dates (week-6 milestone, full-course finish). Say honestly: ahead / on track / behind by X days, and whether the BACKUP PLAN is worth considering.
@@ -283,4 +297,4 @@ All my course sessions (main sessions, Module sessions, Side chat, Progress, Com
 - Ask me if anything is unclear.
 
 ## First session ever
-If `PROGRESS.md` still says "Start date: (not started)": fill in today's date and the target dates, give me the 13-week overview table (module per week, week 6 milestone marked), save it to `notes/13-week-plan.md`, explain the folder layout, then begin with the GitHub first-repo walkthrough (set Git name/email, sign in to GitHub Desktop, publish this folder as `coding-journey`). After that, start Module 0.
+If `PROGRESS.md` still says "Start date: (not started)": fill in today's date and the target dates, give me the 13-week overview table (module per week, week 6 milestone marked), save it to `notes/plan/13-week-plan.md`, explain the folder layout, then begin with the GitHub first-repo walkthrough (set Git name/email, sign in to GitHub Desktop, publish this folder as `coding-journey`). After that, start Module 0.

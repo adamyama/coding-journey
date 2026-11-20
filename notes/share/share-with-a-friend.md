@@ -55,7 +55,7 @@ M00 Basics (HTML, CSS, beginner JS: gym-member dashboard) · M01 Portfolio page 
 
 ## Step 5: Also create
 - `PROGRESS.md`: dates, setup checklist, devices table, a modules table (lessons / project / repo / live link / explain check), interview practice, weak spots, revision log, debug log, mock interviews, session log
-- `notes/13-week-plan.md` (week-by-week, with a week-6 milestone and local holidays), `notes/commands.md` (cheat sheet), `notes/glossary.md`
+- `notes/plan/13-week-plan.md` (week-by-week, with a week-6 milestone and local holidays), `notes/reference/commands.md` (cheat sheet), `notes/reference/glossary.md`
 
 ## Step 6: Then
 Create the sessions above, file them into "💻 Coding", walk me through publishing `coding-journey` to GitHub one step at a time (wait for me to say "done" after each), and then start Module 0.

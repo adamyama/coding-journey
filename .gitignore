@@ -1,0 +1,6 @@
+# Each project in projects/ is its own GitHub repo, so this repo ignores them
+projects/
+
+# Never commit secrets or installed packages
+.env
+node_modules/
